@@ -1,0 +1,33 @@
+B
+Home
+220
+A
+My 2001 Toyota Camery
+200
+25
+F
+An Apple
+Fruits
+30
+B
+My office
+440
+A
+Honda Civic
+300
+30
+F
+A piece of fish
+meat
+45
+F
+A chicken wings
+meat
+60
+A
+2010 Toyota corolla
+400
+60
+B
+School
+900

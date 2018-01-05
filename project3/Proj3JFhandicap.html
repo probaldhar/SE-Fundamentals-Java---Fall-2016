@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>Programming Project 3</title></head><body>
+<div class="Section1">
+<h1 style="text-align: center;" align="center"><span style="font-family: 'Times New Roman';" face="'Times New Roman'">COP5007:
+Java Programming<o:p></o:p></span></h1>
+<h2><span style="font-size: 16pt; font-style: normal; font-family: 'Times New Roman';" face="'Times New Roman'">Programming Project # 3</span><span style="font-style: normal; font-family: 'Times New Roman';" face="'Times New Roman'"><o:p></o:p></span></h2>
+<h3>See Dropbox for due date</h3>
+<h3>Project Outcomes:</h3>
+Use Java to <br>
+<ul type="disc">
+</ul>
+<div style="font-family: Verdana;" class="Section1">
+<ol style="margin-top: 0pt;" start="1" type="1">
+<li class="MsoNormal">Implement an abstract class in
+Java to
+produce reusable classes.</li>
+<li class="MsoNormal">Develop a program with several
+classes.</li><li class="MsoNormal">Extend the functionality of existing classes. </li>
+<li class="MsoNormal">Develop a program using an Array
+of object references.</li>
+<li class="MsoNormal">Use method calls to perform logic
+steps involved in calculations.</li>
+<li class="MsoNormal">Implement a solution involving
+polymorphism.</li>
+</ol>
+</div>
+<ul type="disc">
+</ul>
+<h3>Prep <st1:city w:st="on"><st1:place w:st="on">Readings</st1:place></st1:city>:</h3>
+<p style="font-family: Verdana;" class="MsoNormal"><span>Absolute
+Java&nbsp; Chapters 1 - 8.</span></p>
+<h3><b><span style="font-size: 13.5pt;">Project
+Requirements:<o:p></o:p></span></b></h3>
+<ol style="margin-top: 0pt;" start="1" type="1">
+<ol style="margin-top: 0pt;" start="1" type="1">
+<li style="font-family: Verdana;" class="MsoNormal">It
+turns out that Bowling uses a handicap system similar to
+golf.&nbsp; In both sports a handicap is used to allow players at
+different skill levels to compete. The basic objective of Programming
+Project 3 is to create classes that enable you to calculate player's
+handicap.&nbsp; The games you will be working with are Golf and
+Bowling. &nbsp; Both games require adding scores and calculating
+handicaps.&nbsp; This functionality can be realized by implementing
+inheritance including an abstract class and polymorphism.&nbsp; In
+this
+project will be extending the Score and
+Golfer class we developed in Project 2 and adding classes required to
+calculate a Bowlers handicap.&nbsp;&nbsp; Below&nbsp; are
+the steps we will use to calculate handicaps in both games.</li><br>
+<li style="font-family: Verdana;" class="MsoNormal">NOTE:&nbsp;
+Your code should ensure all instance field are valid as described in
+their requirements.&nbsp;&nbsp; If not write an error message
+to the standard output and continue.&nbsp; Set the field value to
+9999. &nbsp;For example the bowling score must be between 0 and 300(inclusive)</li>
+<li class="MsoNormal">
+<p style="font-family: Verdana;">The Bowling
+handicap is calculated using the following steps:</p>
+<ol style="font-family: Verdana;">
+<li>Calculate the average of the bowlers last 5 scores.</li>
+<li>Calculate the difference between the established base bowling
+average which in our case is 200 and the bowlers average.</li>
+<li>Calculate the final handicap by taking 80% of the
+results of step 2.&nbsp;</li>
+<li>Example</li>
+<ol>
+<li>The bowlers last 5 scores average is 180.</li>
+<li>200 - 180 = 20.</li>
+<li>80% of 20 is 16.</li>
+<li>The bowlers handicap is 16 so we would add 16 to
+his next score.&nbsp;&nbsp; Note if the bowler's average is
+higher than 200, there handicap would be subtract from their next score.</li>
+</ol>
+</ol>
+</li>
+<li style="font-family: Verdana;" class="MsoNormal">
+<p>The
+Golf handicap index is calculated using the following steps:</p>
+</li>
+<ol style="font-family: Verdana;">
+<li>Calculate the stroke differential of each the last 10
+scores.</li>
+<ol>
+<li>Stroke differential is calculated using the following
+formula:</li>
+<li>Differential = (Score&nbsp; -&nbsp; course
+Rating)&nbsp; x&nbsp; (113 / Slope) :&nbsp; round to 2
+decimal places. &nbsp;</li>
+</ol>
+<li>Calculate the average of the 5 lowest differentials
+from step 1.</li>
+<li>Calculate the final handicap by taking 96% of the
+results of step 2. round to 2 decimals places</li>
+<li>Example</li>
+<ol>
+<li>The golfers last 10 differentials are:&nbsp;
+10.2,&nbsp; 11.5, 12.0 , 9.8, 8.2, 9.9, 10.0 15.4, 12.3. 9.5.</li>
+<li>The lowest 5 differentials are:&nbsp; 9.8, 8.2,
+9.9, 10.0 , 9.5</li>
+<li>Average of 5 lowest differentials is:&nbsp; 47.4
+/ 5 = 9.48</li>
+<li>96% of 9.48 is 9.1</li>
+<li>The handicap index is 9.1.&nbsp; Note that like
+bowling a golfer handicap can be a negative number.&nbsp; <br>
+</li>
+</ol>
+</ol>
+<li style="font-family: Verdana;">
+<p>The Classes from Project 2 (Golfer and Score) will be
+reused with the following modifications:</p>
+</li>
+<ol style="font-family: Verdana;">
+<li>Golfer Class - Must extend&nbsp;the Player abstract
+class (<span style="font-style: italic;">listed
+below</span>)</li>
+<ol>
+<li>Add a calculateHandicap method that returns a double
+representing the golfers current handicap. (Player's class abstract
+method)</li>
+<li>Modify methods as required to accommodate the changes
+in the Score class.</li><li><span style="font-weight: bold;">Note: </span>that Name and IDnum are stored in the Player class. </li>
+<li>The toString methods return should be format similar
+to Project 2. However add the current handicap to the output. &nbsp;See Bowler class for an example.&nbsp;</li><li>The array's size can be set to 20.</li>
+</ol>
+<li>
+<p>Score Class</p>
+</li>
+<ol>
+<li>Modify the course instance variable from a String to
+a Course object(<span style="font-style: italic;">see below</span>)
+that contains the course name, course rating and course
+slope.</li>
+<li>Remove the course rating and course slope instance
+fields.</li>
+<li>Modify the rest of the methods and constructor to
+accommodate the change in the storage of course information.&nbsp;</li><li>Score is a gross score thus without any handicap added or subtracted. </li>
+<li>The toString methods return should be format similar
+to Project 2.</li>
+</ol>
+</ol>
+<li style="font-family: Verdana;">
+<p>The Course class</p>
+</li>
+<ol style="font-family: Verdana;">
+<li>Instance Variables</li>
+<ol>
+<li>courseName - a String
+representing
+the name of the course.</li>
+<li>courseRating - a double
+representing the course rating, it must be between 60 and 80.
+(inclusive).&nbsp;<span style="font-style: italic;"></span></li>
+<li>courseSlope - an int representing
+the course slope, it must be between 55 and 155 (inclusive). <span style="font-style: italic;"></span></li>
+</ol>
+<li>Methods</li>
+<ol>
+<li>
+Constructor - sets all instance
+fields from parameters
+</li>
+<li>Default Constructor - sets all
+instance fields to a default value.
+</li>
+<li>
+Access and mutator methods for all
+instance variables. Mutator
+method should be used to set all instance fields </li>
+<li>toString - returns a nicely
+formated String that contains its instance fields such as:</li>
+</ol>
+</ol>
+</ol>
+</ol>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Bay Hill CC&nbsp;&nbsp; &nbsp;&nbsp;
+69.5&nbsp;&nbsp; &nbsp;&nbsp; 123<br>
+<br>
+<ol style="margin-top: 0pt; list-style-type: decimal;" start="6">
+<li style="font-family: Verdana;" class="MsoNormal">
+<p>The Bowler Class
+- Must extend the Player class listed
+below
+</p>
+<ol style="font-family: Verdana;">
+<li>Instance Variables</li>
+<ol>
+
+<li>teamName - A String representing
+the bowler's team.&nbsp;</li>
+<li>IDNum- A unique integer that
+identifies each bowler.</li>
+<li>Array of BowlerScore objects - stores
+all the
+bowler's scores.&nbsp;The array's size can be set to 20.</li>
+</ol>
+<li>Methods</li>
+<ol>
+<li>Constructor - sets name and teamName from parameters
+and uses the static variable nextIDNum to
+retrieve the next available ID number. Creates Array.</li>
+<li>Constructor - default constructor,
+sets all instance field to a default value. Creates Array.</li>
+<li>A
+calculateHandicap method,
+that returns a double representing the golfers current
+handicap.&nbsp;(Player's class abstract method)</li>
+<li>Access and mutator methods for all
+variables. NOTE Mutator method for IDNum should use the static variable
+nextIDNum. Mutator method should be used to set all instance
+fields&nbsp;&nbsp;</li>
+<li>addScore - receives a BowlerScore
+object and adds it to the Array of BowlerScores.</li>
+<li>toString - returns a nicely formated String
+that contains its instance fields:</li>
+</ol>
+</ol>
+<div style="margin-left: 120px;">John
+Smith&nbsp;&nbsp; ID number: 1234&nbsp; Team
+Name:&nbsp; Waffle House &nbsp; &nbsp; Current Handicap: 16<br>
+<br>
+Score&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+Date&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; Lane&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+139&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 6/3/14 &nbsp;
+&nbsp;&nbsp; &nbsp; Codova
+Lanes&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+145&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; 7/23/14 &nbsp; &nbsp;&nbsp;
+Felton Lanes&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;</div></li>
+<li style="font-family: Verdana;">
+<p>The BowlerScore Class
+</p>
+<ol>
+<li style="font-family: Verdana;">Instance
+Variables</li>
+<ol style="font-family: Verdana;">
+<li>laneName - a
+String representing
+the name of the lane</li>
+<li>score - an int representing a
+game's score, it must be between 0 and 300 (inclusive), &nbsp;The score
+is the gross score, without adding or substracting the handicap.&nbsp;</li>
+<li>date - a String representing the
+date in format mm/dd/yy</li>
+</ol>
+<li>Methods</li>
+<ol style="font-family: Verdana;">
+<li>Constructor - sets all instance
+fields from parameters</li>
+<li>Default Constructor - sets all
+instance fields to a default value.&nbsp;</li>
+<li>Access and mutator methods for all
+instance variables. Mutator
+method should be used to set all instance fields</li>
+<li>toString - returns a nicely
+formated String that contains the score and its instance fields </li>
+</ol>
+</ol>
+</li>
+</ol>
+<div style="margin-left: 80px;">139&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+6/3/12&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Codova Lanes</div>
+<ol start="8" style="font-family: Verdana;">
+<li>The Player Class&nbsp;</li>
+<ol>
+<li>Instance Variables</li>
+<ol>
+<li>name - A String representing the player's name</li>
+<li>IDNum- A unique integer that
+identifies each player</li>
+</ol>
+<li>Static Variable - int nextIDNum - starts at 1000 and is
+used to generate the next Player's IDNum</li>
+<li>Methods</li>
+<ol>
+<li>Constructor - sets name and&nbsp;uses the static
+variable nextIDNum to retrieve the next available ID number.</li>
+<li>Constructor - default constructor, sets all instance
+field to a default value.</li>
+<li>Accessor and Mutator methods for instance variables. </li>
+<li>toString - returns a neatly formated String
+representing
+the player's information and all their&nbsp; scores.</li>
+<li>calculateHandicap - abstract method that returns a
+double representing the
+players handicap</li>
+</ol>
+</ol>
+<li>
+<p>The PlayerTester</p></li>
+  <ol>
+    <li>This class should consists of a
+main method that tests all the methods in each class, either directly
+by calling the method from the Tester or indirectly by having another
+method call a method.&nbsp;</li>
+    <li>
+Players, Golf
+Course
+&nbsp;and Score information will be read from a file. &nbsp;A
+sample file is provided that
+shows, use this file format to aid in grading.&nbsp; Using file
+processing makes entering and
+testing program with data sets much more efficient.&nbsp;</li>
+    <li>The file created should
+include
+valid and invalid data that fully tests the
+application.&nbsp; Simple text file process is covered in Absolute Java Chapter 2. <br>
+    </li>
+    <li>Included file called data.txt contains Player's
+data.&nbsp; Your project
+will be graded using an similar input file. Your project must run with
+an input file formated as data.txt is formated.&nbsp; Note the
+file format is as follows:</li>
+    <ol>
+<li>Number of scores</li><li>Character designation of type of player (G - golfer,
+B - bowler)</li><li>Name data etc</li><li>Score data<br>
+<br>
+</li>
+    </ol>
+    <li>Create an Array of
+Players objects.</li>
+    <ol>
+<li>Populate the Array
+with
+both Golfer and Bowler objects.</li><li>After the ArrayList is
+filled,
+call the toString method on each object in the Array. Ensure each
+iteration calls the correct object.</li>
+    </ol>
+  </ol>
+  <li>
+    <p>Create UML Class Diagram for the final version of your project.&nbsp; Follow the guidelines as outlined in Project 2. <br>
+
+    </p>
+
+
+  </li>
+
+</ol>
+<span style="font-family: Verdana;"><span style="font-weight: bold;">Submission
+Requirements:</span>
+</span><br style="font-family: Verdana;">
+<br style="font-family: Verdana;">
+<span style="font-family: Verdana;">Your
+project must be submitted using the instructions below. Any submissions
+that do not follow the stated requirements will not be graded. </span>
+<p class="MsoNormal" style="margin: 3pt 0pt 5pt 36pt; text-indent: -18pt; font-family: Verdana;">1.<span style="font-size: 7pt;">&nbsp;&nbsp;&nbsp;&nbsp;</span>You
+should have 10 files for this assignment: <b><span style="font-size: 13.5pt;"><o:p></o:p></span></b></p>
+<ul style="font-family: Verdana;">
+<ul>
+<li>Golfer.java - The Golfer class</li>
+<li>Score.java - The Golfer's Score class</li>
+<li>Course.java - The score's Course class</li>
+<li>Bowler.java - The Bowler class</li>
+<li>BowlerScore.java - The Bowler's Score class</li>
+<li>Player.java - An abstract super class of players</li>
+<li>PlayerTester.java&nbsp; A driver program for
+your
+project</li>
+<li>data.txt - your test file</li>
+<li>Simply UML Class diagram of your 5 classes, do not
+include the Tester. (Dia file or image file , jpg,
+gif, pdf etc)</li>
+<li>Self graded Grade sheet.</li>
+<li>The javadoc files for all the classes
+except the tester.(Do not turn in)</li>
+</ul>
+</ul>
+<p class="MsoNormal" style="margin: 3pt 0pt 5pt 36pt; text-indent: -18pt; font-family: Verdana;">2.<span style="font-size: 7pt;"> &nbsp; </span>Remember
+to compile and run your program one last
+time
+before you submit it. If your program will not compile, the graders
+will not be responsible for trying to test it. <b><span style="font-size: 13.5pt;"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 3pt 0pt 5pt 36pt; text-indent: -18pt;"><span style="font-family: Verdana;">3.
+Follow the submission requirements posted on
+elearning.</span> <b><span style="font-size: 13.5pt;"><o:p></o:p></span></b></p>
+<p class="MsoNormal"><b><span style="font-size: 13.5pt;"><o:p>&nbsp;</o:p></span></b></p>
+<p class="MsoNormal" style="margin-top: 3pt;"><b><span style="font-size: 13.5pt;">Important Notes:<o:p></o:p></span></b></p>
+<ol>
+<li style="font-family: Verdana;">Projects will be
+graded on whether they correctly
+solve
+the
+problem, and whether they adhere to good programming
+practices.&nbsp;</li>
+<li style="font-family: Verdana;">Projects must be
+submitted by the time specified on
+the
+due
+date. Projects submitted after that time will get a grade of zero.</li>
+<li><span style="font-family: Verdana;">Please
+review UWFs academic conduct policy. Note that
+viewing another student's solution, whether in whole or in part, is
+considered academic dishonesty. Also note that submitting code obtained
+through the Internet or other sources, whether in whole or in part, is
+considered academic dishonesty. All programs submitted will be reviewed
+for evidence of academic dishonesty, and all violations will be handled
+accordingly.</span> <b><span style="font-size: 13.5pt;"><o:p></o:p></span></b></li>
+</ol>
+<p class="MsoNormal"><b><span style="font-size: 13.5pt;"><o:p>&nbsp;</o:p></span></b></p>
+</div>
+</body></html>

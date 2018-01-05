@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><title>Programming Project 5</title></head>
+<body style="" lang="EN-US" link="blue" vlink="purple">
+<h1 style="text-align: center;" align="center"><span style="font-size: 18pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: black;">COP5007
+Java Programming <o:p></o:p></span></h1>
+<h1 style="text-align: center;" align="center"><span style="font-size: 18pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: black;">Programming
+Project 5<o:p></o:p></span></h1>
+<h3>See <span class="SpellE">Dropbox</span>
+for due date</h3>
+<h3>Project Outcomes:</h3>
+<h3 style="margin-bottom: 6pt;"><span style="font-size: 12pt; font-weight: normal;">Develop a Java
+program that uses:</span><span style=""><o:p></o:p></span></h3>
+<br><ul style="margin-top: 0in;" type="disc">
+<li class="MsoNormal" style=""><span style="">File Processing</span></li><li class="MsoNormal" style=""><span style="">Interfaces <br></span></li>
+
+</ul>
+<h3><span style="">Prep Readings:<o:p></o:p></span></h3>
+<p>Absolute Java, chapters 1 - 11&nbsp;</p>
+<h3><span style="">Project Overview:<o:p></o:p></span></h3>
+<p class="MsoNormal" style="margin: 13.7pt 0in;">Government and
+organizations have become increasingly concerned with carbon footprint
+(annual releases of carbon dioxide in the atmosphere. &nbsp;Create
+a Java&nbsp;program&nbsp;that
+using Interfaces to calculates the carbon foot print of various
+objects, much ofthe design is left
+up to the programmer however good  <span class="GramE">object
+oriented design</span>
+is required.<span style="">&nbsp;&nbsp;</span><span style="">
+As we learned Interfaces &nbsp;allow us to specifiy similar behavior
+for &nbsp;seemingly unrelated classes. &nbsp; We will use Interfaces in
+this project to link&nbsp;a buildling and automobile and food. &nbsp;</span><span style=""></span></p>
+<h3><span style="">Project
+Requirements<o:p></o:p></span></h3>
+<ol>
+<li><span style=""><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span>Create three class Building, Auto and Food .</li><li>Provide each class with instance variables that relate to them but not to the other classes.</li><li>Provide
+each class with accessor and mutator methods as well as at least one
+additional method that is unique to that class. &nbsp;</li><li>Provide additional instance variables related to calculating the Carbon Footprint (CO<sup>2</sup> emmission) &nbsp;(See<a href="http://www.carbonglobe.com/calculator-equations.php"> http://www.carbonglobe.com/calculator-equations.php</a> for formula for each type). &nbsp;</li><ol><li>The building only uses electricity and pays $0.25 per kilowatt hour.&nbsp;</li><li>Use the Vehicle calculation for Auto class</li><li>Food class&nbsp;</li><ol><li>Include an instance field that describe the catagory of food.</li><li>Use the food catagory field to determine&nbsp; the emmission factor. .</li></ol></ol>
+<li>Create an Interface called CarbonFootprint with one method
+getCarbonFootprint that returns a double representing the carbon
+footprint in pounds.</li><li>The three classes, Building, Auto and Food, must implement the CarbonFootprint Inteface.</li><li>Create a main application class&nbsp;</li><ol><li>Reads
+data from a file that contains the data required to create at least 3
+instances of each of our three classes (so at least 9 object total)</li><ol><li>The file format is left up to the developer but must be included in the submission.&nbsp;</li><li>Since
+the type and amount of data differ for each catagory, it may be wise to
+use the first field on a given line to identiy the catagory.&nbsp;</li></ol><li>Create
+objects based on the data from the file and place those object in an
+Array of &nbsp;the CarbonFootprint Interface type.&nbsp;</li><li>Iterate
+through the array calling the getCarbonFootprint method polymorphically
+and the catagory and type of &nbsp;item such as: &nbsp;</li><ol><li>My 2001 Toyota Camery carbon footprint&nbsp; is 14234.56 lbs per year.&nbsp;&nbsp;</li><li>An Apple's carbon footprint &nbsp;is 1238.22 lbs per year. </li></ol></ol><li><span style=""><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span>The
+remaining design details are left up to the developer, including how to
+structure the application, how many classes to develop and the
+interrelationship of those classes.&nbsp; Use the techniques you've
+learned in
+this course, including good object oriented design.</li>
+<li><span style=""><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span>Create
+two UML Class Diagram for this project.&nbsp;</li>
+<ol><li>The class diagrams should be created in at multiple iterations.<br><div style="margin-left: 40px;">1.&nbsp;&nbsp;&nbsp;
+The first series of iterations should be done before you code and
+should provide a design that the code follows. (Design Version)<br>2.&nbsp;&nbsp;&nbsp;
+The second series of iterations should be completed after the code is
+complete and should reflex the EXACT class structure of you final
+program. (Final Version)<br>3.&nbsp;&nbsp;&nbsp; The class diagrams should include <br><div style="margin-left: 40px;">1.&nbsp;&nbsp;&nbsp; Access specifier (- or +).<br>2.&nbsp;&nbsp;&nbsp; All instance fields with type.<br>3.&nbsp;&nbsp;&nbsp; All methods with return type and parameter types. <br>4.&nbsp;&nbsp;&nbsp; Associations, Generalization (Inheritance) and Aggregation and Multiplicity <br>5.&nbsp;&nbsp;&nbsp; Stereotyping &#8211; Interface or Abstract Classes.&nbsp;</div></div></li><li>Design
+Version - completed prior to coding the project to assist with
+coding.&nbsp;</li>
+<li><span style=""><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span>Final
+Version - completed after the coding that accurately represents the
+final
+version of the code, generally used for maintenance purposes.</li>
+<li><span style=""><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span>No
+need to include the class with main method in the UML diagrams.
+&nbsp;Refer to
+the UML Distilled <span class="SpellE">pdf</span>
+on the content page as a reference
+for creating class diagrams<span style="font-weight: bold;"></span></li>
+</ol>
+</ol>
+<span style="font-size: 13.5pt;"><b>Submission
+Requirements -&nbsp;</b></span><span style=""><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span>Follow
+the submission requirements posted on <span class="SpellE">elearning</span>. MAKE SURE YOU TURN IN A COPY OF THE TEXT FILE THAT POPULATES THE OBJECTS<br>
+<br>
+<big><b>Important Notes:<br>
+</b></big>
+<ol>
+<li>P<span style="">rojects will be graded on
+whether they correctly solve the problem, and whether they adhere to
+good
+programming practices.</span></li>
+<li><span style=""></span> P<span style="">rojects
+must be submitted by
+the time specified on the due date. Projects submitted after that time
+will get
+a grade of zero</span>.</li>
+<li><span style="">Please review UWF's academic
+honesty policy. Note that viewing another student's solution, whether
+in whole
+or in part is considered academic dishonesty. Also note that submitting
+code
+obtained through the Internet or other sources, whether in whole or in
+part, is
+considered academic dishonesty. All programs submitted will be reviewed
+for
+evidence of academic dishonesty, and all violations will be handled
+accordingly.</span></li>
+</ol>
+<p class="MsoNormal" style="margin: 0in 0in 6pt 0.25in;"><o:p></o:p></p>
+</body></html>
